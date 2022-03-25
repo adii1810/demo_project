@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.32126.315
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Food_Delivery_Api", "Food_Delivery_Api.csproj", "{9CE7BCB7-2D46-462A-B1C1-FB84FD57FD6B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataAccessLayer", "..\DataAccessLayer\DataAccessLayer.csproj", "{3034A2C9-DDC0-4FD7-861C-6CE606A3427E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9CE7BCB7-2D46-462A-B1C1-FB84FD57FD6B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9CE7BCB7-2D46-462A-B1C1-FB84FD57FD6B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9CE7BCB7-2D46-462A-B1C1-FB84FD57FD6B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9CE7BCB7-2D46-462A-B1C1-FB84FD57FD6B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3034A2C9-DDC0-4FD7-861C-6CE606A3427E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3034A2C9-DDC0-4FD7-861C-6CE606A3427E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3034A2C9-DDC0-4FD7-861C-6CE606A3427E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3034A2C9-DDC0-4FD7-861C-6CE606A3427E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {4FF127D1-9441-4842-AB2F-D92A2AD8F23D}
+	EndGlobalSection
+EndGlobal

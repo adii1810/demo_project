@@ -1,0 +1,57 @@
+﻿@model IEnumerable<Application_Project.Areas.Admin.ViewModel.UserDataViewModel>
+
+@{
+    ViewData["Title"] = "ShowUser";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h1>Users</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+               User Name
+            </th>
+            
+            <th>
+                Phone No
+            </th>
+            <th>
+                Email
+            </th>
+            <th>
+                City
+            </th>
+            <th>
+                State
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.User_FirstName)  @Html.DisplayFor(modelItem => item.User_LastName)
+            </td>
+            
+            <td>
+                @Html.DisplayFor(modelItem => item.User_PhoneNo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.User_Email)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.User_City)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.User_State)
+            </td>
+            <td class="btn btn-block btn-primary font-weight-medium auth-form-btn ">               
+              @Html.ActionLink("Show Orders", "ShowOrders", new { UId = item.User_Id })            
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

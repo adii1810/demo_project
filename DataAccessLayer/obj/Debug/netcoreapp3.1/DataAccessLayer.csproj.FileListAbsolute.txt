@@ -1,0 +1,10 @@
+C:\Users\Ulcom31\source\repos\AdityaMVC\Demo_Project\DataAccessLayer\bin\Debug\netcoreapp3.1\DataAccessLayer.deps.json
+C:\Users\Ulcom31\source\repos\AdityaMVC\Demo_Project\DataAccessLayer\bin\Debug\netcoreapp3.1\DataAccessLayer.dll
+C:\Users\Ulcom31\source\repos\AdityaMVC\Demo_Project\DataAccessLayer\bin\Debug\netcoreapp3.1\DataAccessLayer.pdb
+C:\Users\Ulcom31\source\repos\AdityaMVC\Demo_Project\DataAccessLayer\obj\Debug\netcoreapp3.1\DataAccessLayer.csproj.AssemblyReference.cache
+C:\Users\Ulcom31\source\repos\AdityaMVC\Demo_Project\DataAccessLayer\obj\Debug\netcoreapp3.1\DataAccessLayer.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Ulcom31\source\repos\AdityaMVC\Demo_Project\DataAccessLayer\obj\Debug\netcoreapp3.1\DataAccessLayer.AssemblyInfoInputs.cache
+C:\Users\Ulcom31\source\repos\AdityaMVC\Demo_Project\DataAccessLayer\obj\Debug\netcoreapp3.1\DataAccessLayer.AssemblyInfo.cs
+C:\Users\Ulcom31\source\repos\AdityaMVC\Demo_Project\DataAccessLayer\obj\Debug\netcoreapp3.1\DataAccessLayer.csproj.CoreCompileInputs.cache
+C:\Users\Ulcom31\source\repos\AdityaMVC\Demo_Project\DataAccessLayer\obj\Debug\netcoreapp3.1\DataAccessLayer.dll
+C:\Users\Ulcom31\source\repos\AdityaMVC\Demo_Project\DataAccessLayer\obj\Debug\netcoreapp3.1\DataAccessLayer.pdb

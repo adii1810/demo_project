@@ -1,0 +1,56 @@
+﻿@model IEnumerable<Application_Project.Areas.Admin.ViewModel.OrderViewModel>
+
+@{
+    ViewData["Title"] = "ShowOrders";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h1>User Orders</h1>
+
+<script src="~/js/site.js"></script>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Order Id
+            </th>
+            <th>
+                Date
+            </th>
+            <th>
+                Valet Id
+            </th>
+            <th>
+                Total Amount
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Order_Id)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Order_Date)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Valet_id)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Total)
+                </td>
+                <td  >
+                   
+                     <a  onclick="showPopup('@Url.Action("ShowOrdersDetails1","Admin",new { OId=item.Order_Id , total = item.Total },Context.Request.Scheme)', 'Order Details')" class="btn btn-success text-white"> Show Detailed Orders</a>
+                   
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+
+

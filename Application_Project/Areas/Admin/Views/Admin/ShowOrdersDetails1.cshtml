@@ -1,0 +1,57 @@
+﻿@model IEnumerable<Application_Project.Areas.Admin.ViewModel.OrderDetailViewModel>
+
+@{
+    ViewData["Title"] = "ShowOrdersDetails1";
+    Layout = "~/Views/Shared/_modal.cshtml";
+}
+
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Item No
+            </th>
+            <th>
+                Item Name
+            </th>
+            <th>
+                Quantity
+            </th>
+            <th>
+                Price
+            </th>
+
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Order_Detail_Id)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Product_name)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Quantity)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Price)
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+@{
+
+    var mydata = ViewBag.total; //ViewBag["total"];
+}
+
+<hr />
+<h3 align="Center" style="background-color:black;color:white">
+    Total Amount: @mydata
+</h3>
+<hr />

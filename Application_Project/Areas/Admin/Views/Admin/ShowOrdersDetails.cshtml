@@ -1,0 +1,73 @@
+﻿@model IEnumerable<Application_Project.Areas.Admin.ViewModel.OrderDetailViewModel>
+
+@{
+    ViewData["Title"] = "ShowOrdersDetails";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h1>ShowOrdersDetails</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Order_Detail_Id)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Product_name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Quantity)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Price)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Total)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Order_Detail_Id)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Product_name)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Quantity)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Price)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Total)
+                </td>
+                
+            </tr>
+        }
+    </tbody>
+</table>
+
+@*@{
+
+    var mydata = ViewBag.total; //ViewBag["total"];
+}
+
+    </tbody>
+</table>
+
+
+<hr />
+<h2 align="Center">
+
+    Total Amount: @mydata
+</h2>
+<hr />*@

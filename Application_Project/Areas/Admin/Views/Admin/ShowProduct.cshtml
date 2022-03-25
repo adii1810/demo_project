@@ -1,0 +1,77 @@
+﻿@model Application_Project.Areas.Admin.ViewModel.categoryViewModel
+
+@{
+    ViewData["Title"] = "ShowProduct";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+@*<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>*@
+<h1>ShowProduct</h1>
+<form asp-action="ShowProduct" asp-controller="Admin" asp-area="Admin" method="post">
+    <div class="row align-content-center mx-auto">
+        <div class="col-md-12">
+            <div class="card">
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-2">
+                            <div class="form-group ">
+                                @*<select  asp-for="@Model.Id" asp-items="@Model.Categories" class="form-control" id="main">
+                                        <option selected>Select Item</option>
+                                    </select>*@
+
+                                @Html.DropDownListFor(x => x.Categories, new SelectList(Model.Categories, "Value", "Text"), "Please Select", htmlAttributes: new { @class = "form-control", id = "main1" })
+                            </div>
+                        </div>
+                        <div class="col-md-2">
+                            <div class="form-group ">
+                                <input type="text" id="subCategory" placeholder="Sub Category" class="form-control" />
+                            </div>
+                        </div>
+                        <div class="col-md-2">
+                            <div class="form-group ">
+                                <input type="text" id="restaurant" placeholder="Find Restaurant" value=" @ViewBag.data" class="form-control" />
+                            </div>
+                        </div>
+
+                        <div class="col-md-2">
+                            <input type="submit" class="btn btn-dark" value="Search" />
+
+                        </div>
+
+                        <p>
+
+                            @ViewBag.data
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</form>
+
+<script>
+
+    $("#main1").change(function () {
+        var selectedval =$(this).val();
+        alert('hello error');
+
+        $.ajax({
+            type: 'POST',
+            url: '/Admin/Admin/ShowProduct',
+            data: { mainId: selectedval },
+            success:
+                function (response) {
+                    alert("hyy");
+                    console.log(response.data);
+                },
+            error:
+                function (response) {
+                    alert(response.data);
+                }
+            
+        });
+    })
+
+   
+</script>
+

@@ -1,0 +1,68 @@
+﻿
+@{
+    ViewData["Title"] = "_Product";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+
+<section class="search-banner bg-danger text-white py-2" id="search-banner">
+    <div class="container py-2 my-2">
+        <div class="row text-center pb-4">
+            <div class="col-md-12">
+                <h2>Find the New & Used Car in India</h2>
+            </div>
+        </div>
+        <div class="row align-content-center mx-auto">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-md-2">
+                                <div class="form-group ">
+                                    <select id="inputState" class="form-control">
+                                        <option selected>... Select New/Used...</option>
+                                        <option>New</option>
+                                        <option>Used</option>
+                                    </select>
+                                        
+                                </div>
+                            </div>
+                            <div class="col-md-2">
+                                <div class="form-group ">
+                                    <input type="text" id="subCategory" placeholder="Sub Category" class="form-control" />
+                                </div>
+                            </div>
+                            <div class="col-md-2">
+                                <div class="form-group ">
+                                    <input type="text" id="restaurant" placeholder="Find Restaurant" class="form-control" />
+                                </div>
+                            </div>
+                            
+                            <div class="col-md-2">
+                                <button type="button" class="btn btn-dark">Search</button>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    
+</section>
+<div class="main-panel">
+    <div class="content-wrapper">
+        @RenderBody()
+    </div>
+    <!-- content-wrapper ends -->
+    <!-- partial:partials/_footer.html -->
+    <!-- partial -->
+</div>
+
+
