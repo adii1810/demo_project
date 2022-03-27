@@ -52,7 +52,7 @@ namespace Food_Delivery_Api.Controllers
         //     return Id+"";
         // }
 
-        [HttpGet("{user,pass}")]
+        [HttpGet("Login/{user,pass}")]
         public string Login(string user,string pass)
         {
             if (user != null && pass != null)

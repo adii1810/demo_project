@@ -1,0 +1,142 @@
+﻿@model IEnumerable<My_Project.Areas.Admin.ViewModels.OrderViewModel>
+
+@{
+    ViewData["Title"] = "ShowOrders";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<style>
+    table {
+        border: 1px solid #ccc;
+        border-collapse: collapse;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        table-layout: fixed;
+    }
+
+        table caption {
+            font-size: 1.5em;
+            margin: .5em 0 .75em;
+        }
+
+        table tr {
+            background-color: #f8f8f8;
+            border: 1px solid #ddd;
+            padding: .35em;
+        }
+
+        table th,
+        table td {
+            padding: .625em;
+            text-align: center;
+        }
+
+        table th {
+            font-size: .85em;
+            letter-spacing: .1em;
+            text-transform: uppercase;
+        }
+
+    @@media screen and (max-width: 600px) {
+        table {
+            border: 0;
+        }
+
+            table caption {
+                font-size: 1.3em;
+            }
+
+            table thead {
+                border: none;
+                clip: rect(0 0 0 0);
+                height: 1px;
+                margin: -1px;
+                overflow: hidden;
+                padding: 0;
+                position: absolute;
+                width: 1px;
+            }
+
+            table tr {
+                border-bottom: 3px solid #ddd;
+                display: block;
+                margin-bottom: .625em;
+            }
+
+            table td {
+                border-bottom: 1px solid #ddd;
+                display: block;
+                font-size: .8em;
+                text-align: right;
+            }
+
+                table td::before {
+                    /*
+                    * aria-label has no advantage, it won't be read inside a table
+                    content: attr(aria-label);
+                    */
+                    content: attr(data-label);
+                    float: left;
+                    font-weight: bold;
+                    text-transform: uppercase;
+                }
+
+                table td:last-child {
+                    border-bottom: 0;
+                }
+    }
+    /* general styling */
+    body {
+        font-family: "Open Sans", sans-serif;
+        line-height: 1.25;
+    }
+
+</style>
+
+<div class="py-4">
+    <label class="text-blue"><i class="fa-brands fa-opencart"> User Details</i></label>
+</div>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Order Id
+            </th>
+            <th>
+                Order Date
+            </th>
+            <th>
+                Valet Id
+            </th>
+            <th>
+                Total
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td data-label="Order Id">
+                    @Html.DisplayFor(modelItem => item.Order_Id)
+                </td>
+                <td data-label="Order Date">
+                    @Html.DisplayFor(modelItem => item.Order_Date)
+                </td>
+                <td data-label="Valet Id">
+                    @Html.DisplayFor(modelItem => item.Valet_id)
+                </td>
+                <td data-label="Total">
+                    @Html.DisplayFor(modelItem => item.Total)
+                </td>
+                <td>
+                  <a class="text-blue" asp-controller="Admin" asp-action="ShowOrdersDetails" asp-route-Id="@item.Order_Id" asp-route-total="@item.Total"><i class="fa-solid fa-burger-fries">Orders Details</i> </a>
+
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
